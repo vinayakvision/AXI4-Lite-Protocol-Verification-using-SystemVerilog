@@ -1,0 +1,7 @@
+s1(09Apr2026:16:06:33):  irun -access +rwc axi4lite_if.sv axi4lite_slave.sv testbench.sv 
+s2(09Apr2026:16:08:00):  irun -access +rwc axi4lite_if.sv axi4lite_slave.sv testbench.sv 
+s3(09Apr2026:16:09:04):  irun -access +rwc axi4lite_if.sv axi4lite_slave.sv testbench.sv 
+s4(09Apr2026:16:13:22):  irun -access +rwc axi4lite_if.sv axi4lite_slave.sv testbench.sv 
+s5(09Apr2026:16:13:45):  irun -access +rwc axi4lite_if.sv axi4lite_slave.sv testbench.sv 
+s6(09Apr2026:16:14:17):  irun -access +rwc axi4lite_if.sv axi4lite_slave.sv testbench.sv 
+s7(09Apr2026:16:14:26):  irun -access +rwc axi4lite_if.sv axi4lite_slave.sv testbench.sv 
