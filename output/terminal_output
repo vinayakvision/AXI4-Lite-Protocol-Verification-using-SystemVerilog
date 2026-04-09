@@ -1,0 +1,49 @@
+ncsim> run
+
+[0 ns] Reset released
+
+========== TC1: Basic Write ? Read-back ==========
+  [PASS] TC1 addr=0x00 | got=0xdeadbeef
+  [PASS] TC1 addr=0x04 | got=0xcafebabe
+
+========== TC2: Address Sweep (all 16 locations) ==========
+  [PASS] TC2 addr=0x00 | got=0xa0000000
+  [PASS] TC2 addr=0x04 | got=0xa0000001
+  [PASS] TC2 addr=0x08 | got=0xa0000002
+  [PASS] TC2 addr=0x0c | got=0xa0000003
+  [PASS] TC2 addr=0x10 | got=0xa0000004
+  [PASS] TC2 addr=0x14 | got=0xa0000005
+  [PASS] TC2 addr=0x18 | got=0xa0000006
+  [PASS] TC2 addr=0x1c | got=0xa0000007
+  [PASS] TC2 addr=0x20 | got=0xa0000008
+  [PASS] TC2 addr=0x24 | got=0xa0000009
+  [PASS] TC2 addr=0x28 | got=0xa000000a
+  [PASS] TC2 addr=0x2c | got=0xa000000b
+  [PASS] TC2 addr=0x30 | got=0xa000000c
+  [PASS] TC2 addr=0x34 | got=0xa000000d
+  [PASS] TC2 addr=0x38 | got=0xa000000e
+  [PASS] TC2 addr=0x3c | got=0xa000000f
+
+========== TC3: Byte-Enable Write Strobes ==========
+  [PASS] TC3 WSTRB=0001 byte0 | got=0xffffff11
+  [PASS] TC3 WSTRB=0110 bytes[2:1] | got=0xff223311
+  [PASS] TC3 WSTRB=1000 byte3 | got=0x44223311
+
+========== TC4: Out-of-Range Address ? SLVERR ==========
+  [PASS] TC4 WRITE SLVERR received (BRESP=10)
+  [PASS] TC4 READ SLVERR received (RRESP=10, RDATA=0xdeadc0de)
+
+========== TC5: Read-After-Write Hazard ==========
+  [PASS] TC5 RAW addr=0x10 | got=0x12345678
+
+
+============================================================
+  SIMULATION COMPLETE  |  PASS: 24  |  FAIL: 0
+============================================================
+
+   ALL TESTS PASSED DESIGN VERIFIED 
+
+Simulation stopped via $stop(1) at time 2215 NS + 0
+./testbench.sv:243     $stop;
+ncsim> 
+
